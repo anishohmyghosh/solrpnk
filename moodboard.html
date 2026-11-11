@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Moodboard · SOLRPNK</title>
+<meta name="description" content="An interactive guide to solarpunk: what it means, where it came from, what it's for, games, and a moodboard of art and real places.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..700;1,300..700&family=Manrope:wght@300..700&family=Goldman:wght@400;700&display=swap"><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..700;1,300..700&family=Manrope:wght@300..700&family=Goldman:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..700;1,300..700&family=Manrope:wght@300..700&family=Goldman:wght@400;700&display=swap" rel="stylesheet"></noscript>
+<link rel="preconnect" href="https://i.pinimg.com"><link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='14' fill='%23f0c25e'/%3E%3Cg stroke='%238fd18a' stroke-width='4' stroke-linecap='round'%3E%3Cpath d='M32 4v8M32 52v8M4 32h8M52 32h8M12 12l6 6M46 46l6 6M12 52l6-6M46 18l6-6'/%3E%3C/g%3E%3C/svg%3E">
+</head>
+<body data-page="moodboard">
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><i></i></div>
+<nav class="nav" aria-label="Pages">
+  <a href="index.html" class="brand"><span class="sun-dot"></span><b>SOLR</b>PNK</a>
+  <div class="nav-links">
+    <a href="index.html" data-p="learn">Learn</a><a href="play.html" data-p="play">Play</a><a href="moodboard.html" data-p="moodboard">Moodboard</a><a href="voices.html" data-p="voices">Voices</a>
+  </div>
+</nav>
+<!-- ═════ MOODBOARD ═════ -->
+<section class="mood page" id="moodboard">
+  <div class="mood-head">
+    <div>
+      <p class="eyebrow">Moodboard</p>
+      <h2>The wall</h2>
+      <p class="mood-note">Drag or scroll to wander. Tap a tag to filter. Tap an image to open it.</p>
+    </div>
+    <div class="tags">
+      <div class="tag-main" id="tagMain" role="tablist"></div>
+      <div class="tag-sub" id="tagSub"></div>
+    </div>
+  </div>
+  <div class="wall" id="wall"><div class="plane" id="plane"></div><div class="wall-fade"></div></div>
+</section>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-x" aria-label="Close">×</button>
+  <figure><img alt=""><figcaption><b></b><span></span><a target="_blank" rel="noopener">Source ↗</a></figcaption></figure>
+</div>
+<section class="next-pages"><div class="wrap"><p class="eyebrow">Keep going</p><div class="next-grid"><a class="next-card" href="index.html"><span>Learn</span><small>What it means, where it came from, what it’s for</small><i>→</i></a><a class="next-card" href="play.html"><span>Play</span><small>Three small games</small><i>→</i></a><a class="next-card" href="voices.html"><span>Voices</span><small>People, places and work from around the world</small><i>→</i></a></div></div></section>
+<script src="data/mood.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>

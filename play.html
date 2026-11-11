@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Play · SOLRPNK</title>
+<meta name="description" content="An interactive guide to solarpunk: what it means, where it came from, what it's for, games, and a moodboard of art and real places.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..700;1,300..700&family=Manrope:wght@300..700&family=Goldman:wght@400;700&display=swap"><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..700;1,300..700&family=Manrope:wght@300..700&family=Goldman:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..700;1,300..700&family=Manrope:wght@300..700&family=Goldman:wght@400;700&display=swap" rel="stylesheet"></noscript>
+<link rel="preconnect" href="https://i.pinimg.com"><link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='14' fill='%23f0c25e'/%3E%3Cg stroke='%238fd18a' stroke-width='4' stroke-linecap='round'%3E%3Cpath d='M32 4v8M32 52v8M4 32h8M52 32h8M12 12l6 6M46 46l6 6M12 52l6-6M46 18l6-6'/%3E%3C/g%3E%3C/svg%3E">
+</head>
+<body data-page="play">
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><i></i></div>
+<nav class="nav" aria-label="Pages">
+  <a href="index.html" class="brand"><span class="sun-dot"></span><b>SOLR</b>PNK</a>
+  <div class="nav-links">
+    <a href="index.html" data-p="learn">Learn</a><a href="play.html" data-p="play">Play</a><a href="moodboard.html" data-p="moodboard">Moodboard</a><a href="voices.html" data-p="voices">Voices</a>
+  </div>
+</nav>
+<header class="page-head"><div class="wrap"><p class="eyebrow">Play</p><h1 class="page-title">Three small games</h1><p class="lede">Rewild a city block, sniff out greenwash, and sort the aesthetics.</p></div></header>
+<!-- ═════ PLAY ═════ -->
+<section class="sec alt" id="play">
+  <div class="wrap">
+    
+    <div class="game-tabs reveal" role="tablist">
+      <button class="on" data-g="block">Rewild the Block</button>
+      <button data-g="wash">Punk or Greenwash?</button>
+      <button data-g="sort">Sort the Aesthetic</button>
+    </div>
+
+    <div class="game on" id="g-block">
+      <p class="g-hint">Tap each glowing spot to swap what’s there. Get every meter into the gold and the block blooms.</p>
+      <div class="block-stage">
+        <svg id="blockSvg" viewBox="0 0 1000 560" role="img" aria-label="A city block you can transform"></svg>
+        <div class="block-pop" id="blockPop" hidden></div>
+      </div>
+      <div class="meters" id="meters"></div>
+      <div class="g-foot"><span id="blockMsg">Your block is still a gray one.</span><button class="pill ghost sm" id="blockReset">Reset block</button></div>
+    </div>
+
+    <div class="game" id="g-wash">
+      <p class="g-hint">Swipe or drag each card: right if it’s real solarpunk, left if it’s greenwash. Arrow keys work too.</p>
+      <div class="deck" id="deck"></div>
+      <div class="wash-btns"><button class="pill ghost" id="washL">← Greenwash</button><button class="pill gold" id="washR">Punk →</button></div>
+      <p class="wash-explain" id="washExplain" aria-live="polite"></p>
+    </div>
+
+    <div class="game" id="g-sort">
+      <p class="g-hint">Drag the picture into the bin it belongs in. Each picture asks a different pair of aesthetics. Ten rounds, dealt from a shuffled deck of 250+ examples, so you won’t see repeats until you’ve been through them all.</p>
+      <div class="sort-stage">
+        <div class="sort-bin" data-b="0"><b></b><small></small></div>
+        <div class="sort-card-slot"><div class="sort-card" id="sortCard"><img alt="" draggable="false"></div><p class="sort-score" id="sortScore"></p></div>
+        <div class="sort-bin" data-b="1"><b></b><small></small></div>
+      </div>
+      <p class="sort-msg" id="sortMsg" aria-live="polite"></p>
+      <div class="sort-foot"><button class="pill ghost sm" id="sortNext" hidden>Next →</button></div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="next-pages"><div class="wrap"><p class="eyebrow">Keep going</p><div class="next-grid"><a class="next-card" href="index.html"><span>Learn</span><small>What it means, where it came from, what it’s for</small><i>→</i></a><a class="next-card" href="moodboard.html"><span>Moodboard</span><small>A wall of art and real places</small><i>→</i></a><a class="next-card" href="voices.html"><span>Voices</span><small>People, places and work from around the world</small><i>→</i></a></div></div></section>
+<script src="data/mood.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
